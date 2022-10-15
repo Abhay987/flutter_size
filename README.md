@@ -22,7 +22,7 @@ You can get size From BuildContext size and also size form Layout Builder Box Co
 
 ```yaml
 dependencies:
-  flutter_size: ^4.0.6
+  flutter_size: ^0.0.1
 ```
 
 ### Super simple to use
