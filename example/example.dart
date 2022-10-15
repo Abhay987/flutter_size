@@ -1,0 +1,1 @@
+export 'package:flutter_size/src/get_size.dart';

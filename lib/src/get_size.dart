@@ -30,25 +30,20 @@ extension DeviceSize on BuildContext {
     return MediaQuery.of(this).size.height - kToolbarHeight - MediaQuery.of(this).padding.top;
   }
 
-  // getLayoutBuilderMaximumHeight(){
-  //   const constraints = BoxConstraints();
-  //   constraints.getLayoutMaxHeight;
-  // }
-
    double get getLayoutMaxWidth {
-    return const BoxConstraints().getLayoutMaxWidth;
+    return LayoutSize.getLayoutMaxWidth(const BoxConstraints());
   }
 
   double get getLayoutMinWidth {
-    return const BoxConstraints().getLayoutMinWidth;
+    return LayoutSize.getLayoutMinWidth(const BoxConstraints());
   }
 
   double get getLayoutMaxHeight {
-    return const BoxConstraints().getLayoutMaxHeight;
+    return LayoutSize.getLayoutMaxHeight(const BoxConstraints());
   }
 
   double get getLayoutMinHeight {
-    return const BoxConstraints().getLayoutMinHeight;
+    return LayoutSize.getLayoutMinHeight(const BoxConstraints());
   }
 
 
