@@ -13,10 +13,10 @@ class _ExampleSecondScreenState extends State<ExampleSecondScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: SizedBox(width: context.maxWidth*0.2,
-            height: context.maxHeight*0.4,
-            child: const Text("Example Second"))
-      ),
+          child: SizedBox(
+              width: context.maxWidth * 0.2,
+              height: context.maxHeight * 0.4,
+              child: const Text("Example Second"))),
     );
   }
 }

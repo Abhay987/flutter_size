@@ -11,12 +11,14 @@ class ExampleScreen extends StatefulWidget {
 class _ExampleScreenState extends State<ExampleScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(
-      child: SizedBox(
-        width: context.width(0.4),
-        height: context.height(0.3),
-        child: const Text("Example"),
+    return Scaffold(
+      body: Center(
+        child: SizedBox(
+          width: context.width(0.4),
+          height: context.height(0.3),
+          child: const Text("Example"),
+        ),
       ),
-    ),);
+    );
   }
 }

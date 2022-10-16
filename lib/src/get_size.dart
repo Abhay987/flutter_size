@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_size/src/layout_body.dart';
 import 'package:flutter_size/src/layout_builder_size.dart';
 
 extension DeviceSize on BuildContext {
   double width(double widthSize) {
-    return MediaQuery.of(this).size.width*widthSize;
+    return MediaQuery.of(this).size.width * widthSize;
   }
 
   double height(double heightSize) {
-    return MediaQuery.of(this).size.height*heightSize;
+    return MediaQuery.of(this).size.height * heightSize;
   }
 
   double get deviceWidth {
@@ -23,15 +22,17 @@ extension DeviceSize on BuildContext {
     return MediaQuery.of(this).orientation;
   }
 
-  double widthExceptPadding(double paddingSize){
-    return MediaQuery.of(this).size.width-paddingSize;
+  double widthExceptPadding(double paddingSize) {
+    return MediaQuery.of(this).size.width - paddingSize;
   }
 
-  double get totalHeight{
-    return MediaQuery.of(this).size.height - kToolbarHeight - MediaQuery.of(this).padding.top;
+  double get totalHeight {
+    return MediaQuery.of(this).size.height -
+        kToolbarHeight -
+        MediaQuery.of(this).padding.top;
   }
 
-   double get maxWidth {
+  double get maxWidth {
     return LayoutSize.maxWidth(const BoxConstraints());
   }
 
@@ -46,10 +47,4 @@ extension DeviceSize on BuildContext {
   double get minHeight {
     return LayoutSize.minHeight(const BoxConstraints());
   }
-
-  // Widget layoutBuilder({required Widget widgetBody}) {
-  //   return LayoutBody(layoutBody: widgetBody);
-  // }
-
 }
-
