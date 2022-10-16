@@ -1,19 +1,9 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
 Language: [English](README.md)
 
-You can get size From BuildContext size and also size form Layout Builder Box Constraints size
+You can add and get custom size,orientation of any type of widgets.
+In size, you can add and get width,height of the device and widgets and You also get the full height and width of particular devices.
+This packages is developed for all platforms.
+This purpose of creating this package is to save time and increase productivity.
 
 ## Get started
 
@@ -22,10 +12,18 @@ You can get size From BuildContext size and also size form Layout Builder Box Co
 
 ```yaml
 dependencies:
-  flutter_size: ^0.0.1
+  flutter_size: ^0.0.3
 ```
 
-### Super simple to use
+## Features
+
+- Cross platform: mobile, desktop, browser
+- Simple, powerful, & Easy to use
+- **NO** native dependencies
+- Time Saving & improve productivity
+
+
+### Usage
 
 ```dart
 import 'package:flutter_size/get_size.dart';
@@ -40,38 +38,11 @@ class _GetSizeState extends State<GetSize> {
   @override
   Widget build(BuildContext context) {
     return Center(child : Container(
-      width : context.getWidth(0.3),
-      height : context.getHeight(0.9),
+      width : context.width(0.3),
+      height : context.height(0.9),
     ),
     );
   }
 }
 
 ```
-
-
-
-## Examples
-
-```dart
-import 'package:flutter_size/get_size.dart';
-class GetSize extends StatefulWidget {
-  const GetSize({Key? key}) : super(key: key);
-
-  @override
-  State<GetSize> createState() => _GetSizeState();
-}
-
-class _GetSizeState extends State<GetSize> {
-  @override
-  Widget build(BuildContext context) {
-    return Center(child : Container(
-      width : context.getDeviceWidth,
-      height : context.getDeviceHeight,
-    ),
-    );
-  }
-}
-
-```
-

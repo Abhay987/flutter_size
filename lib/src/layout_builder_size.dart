@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
 class LayoutSize {
-   static double getLayoutMaxWidth(BoxConstraints constraints) {
+   static double maxWidth(BoxConstraints constraints) {
      return constraints.maxWidth;
    }
-   static double getLayoutMinWidth(BoxConstraints constraints) {
+   static double minWidth(BoxConstraints constraints) {
      return constraints.minWidth;
    }
-   static double getLayoutMaxHeight(BoxConstraints constraints) {
+   static double maxHeight(BoxConstraints constraints) {
      return constraints.maxHeight;
    }
-   static double getLayoutMinHeight(BoxConstraints constraints) {
+   static double minHeight(BoxConstraints constraints) {
      return constraints.minHeight;
    }
 }

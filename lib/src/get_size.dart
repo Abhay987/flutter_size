@@ -1,51 +1,55 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_size/src/layout_body.dart';
 import 'package:flutter_size/src/layout_builder_size.dart';
 
 extension DeviceSize on BuildContext {
-  double getWidth(double widthSize) {
+  double width(double widthSize) {
     return MediaQuery.of(this).size.width*widthSize;
   }
 
-  double getHeight(double heightSize) {
+  double height(double heightSize) {
     return MediaQuery.of(this).size.height*heightSize;
   }
 
-  double get getDeviceWidth {
+  double get deviceWidth {
     return MediaQuery.of(this).size.width;
   }
 
-  double get getDeviceHeight {
+  double get deviceHeight {
     return MediaQuery.of(this).size.height;
   }
 
-  Orientation get getDeviceOrientation {
+  Orientation get deviceOrientation {
     return MediaQuery.of(this).orientation;
   }
 
-  double getWidthExceptPadding(double paddingSize){
+  double widthExceptPadding(double paddingSize){
     return MediaQuery.of(this).size.width-paddingSize;
   }
 
-  double get getTotalHeight{
+  double get totalHeight{
     return MediaQuery.of(this).size.height - kToolbarHeight - MediaQuery.of(this).padding.top;
   }
 
-   double get getLayoutMaxWidth {
-    return LayoutSize.getLayoutMaxWidth(const BoxConstraints());
+   double get maxWidth {
+    return LayoutSize.maxWidth(const BoxConstraints());
   }
 
-  double get getLayoutMinWidth {
-    return LayoutSize.getLayoutMinWidth(const BoxConstraints());
+  double get minWidth {
+    return LayoutSize.minWidth(const BoxConstraints());
   }
 
-  double get getLayoutMaxHeight {
-    return LayoutSize.getLayoutMaxHeight(const BoxConstraints());
+  double get maxHeight {
+    return LayoutSize.maxHeight(const BoxConstraints());
   }
 
-  double get getLayoutMinHeight {
-    return LayoutSize.getLayoutMinHeight(const BoxConstraints());
+  double get minHeight {
+    return LayoutSize.minHeight(const BoxConstraints());
   }
 
+  // Widget layoutBuilder({required Widget widgetBody}) {
+  //   return LayoutBody(layoutBody: widgetBody);
+  // }
 
 }
 
