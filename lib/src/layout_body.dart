@@ -20,8 +20,7 @@ class _LayoutBodyState extends State<LayoutBody> {
   Widget build(BuildContext context) {
     return LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
-
-       //Checking Condition on width and height of the widget
+      //Checking Condition on width and height of the widget
       if (widget.width == null && widget.height == null) {
         return SizedBox(
           height: constraints.maxHeight,

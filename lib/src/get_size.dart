@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_size/src/layout_builder_size.dart';
 
 extension DeviceSize on BuildContext {
-
   ///FetchCustomWidth
   double width(double widthSize) {
     return MediaQuery.of(this).size.width * widthSize;

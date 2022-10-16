@@ -12,7 +12,7 @@ This purpose of creating this package is to save time and increase productivity.
 
 ```yaml
 dependencies:
-  flutter_size: ^0.0.3
+  flutter_size: ^0.0.4
 ```
 
 ## Features

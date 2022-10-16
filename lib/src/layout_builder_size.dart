@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class LayoutSize {
-
   ///FetchMaximumWidth
   static double maxWidth(BoxConstraints constraints) {
     return constraints.maxWidth;
