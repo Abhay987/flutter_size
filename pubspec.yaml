@@ -1,5 +1,5 @@
 name: flutter_size
-description: You can add and get custom size,orientation of any type of widgets. In size, you can add and get width,height of the device and widgets and You also get the full height and width of particular devices.This purpose of creating this package is to save time and increase productivity.
+description: In flutter_size,you can add and get device orientation,width,height of the device and widgets and You also get the full height and width of particular devices.
 version: 0.0.3
 homepage: https://github.com/Abhay987/flutter_size.git
 

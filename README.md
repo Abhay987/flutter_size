@@ -46,3 +46,31 @@ class _GetSizeState extends State<GetSize> {
 }
 
 ```
+
+### Another Example
+
+```dart
+import 'package:flutter_size/get_size.dart';
+class ExampleScreen extends StatefulWidget {
+  const ExampleScreen({Key? key}) : super(key: key);
+
+  @override
+  State<ExampleScreen> createState() => _ExampleScreenState();
+}
+
+class _ExampleScreenState extends State<ExampleScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+        body: Center(
+          child: LayoutBody(
+            layoutBody: Text("Hlo"),
+            width: 0.2,
+            height: 0.4,
+          ),
+        ));
+  }
+}
+
+```
+

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
+///Return Layout Builder Widget
+
 class LayoutBody extends StatefulWidget {
   final Widget layoutBody;
   final num? width;
@@ -18,6 +20,8 @@ class _LayoutBodyState extends State<LayoutBody> {
   Widget build(BuildContext context) {
     return LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
+
+       //Checking Condition on width and height of the widget
       if (widget.width == null && widget.height == null) {
         return SizedBox(
           height: constraints.maxHeight,
