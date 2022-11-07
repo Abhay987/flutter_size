@@ -1,3 +1,7 @@
+## 0.0.5
+
+* Added Multiple example in readme file
+
 ## 0.0.4
 
 * Adding documentation and comment in document api for better understanding.

@@ -1,6 +1,6 @@
 name: flutter_size
-description: In flutter_size,you can add and get device orientation,width,height of the device and widgets and You also get the full height and width of particular devices.
-version: 0.0.4
+description: This package helps the user to get width, height details of device, widgets. This purpose of creating this package is to save time and increase productivity.
+version: 0.0.5
 homepage: https://github.com/Abhay987/flutter_size.git
 
 environment:

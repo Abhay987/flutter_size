@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_size/src/layout_builder_size.dart';
 
 extension DeviceSize on BuildContext {
   ///FetchCustomWidth
@@ -41,21 +40,41 @@ extension DeviceSize on BuildContext {
 
   ///FetchMaximumWidth
   double get maxWidth {
-    return LayoutSize.maxWidth(const BoxConstraints());
+    double getMaxWidth = 0;
+    LayoutBuilder(builder: (deviceSize, constraints) {
+      getMaxWidth = constraints.maxWidth;
+      return const SizedBox();
+    });
+    return getMaxWidth;
   }
 
   ///FetchMinimumWidth
   double get minWidth {
-    return LayoutSize.minWidth(const BoxConstraints());
+    double getMinWidth = 0;
+    LayoutBuilder(builder: (deviceSize, constraints) {
+      getMinWidth = constraints.minWidth;
+      return const SizedBox();
+    });
+    return getMinWidth;
   }
 
-  ///FetchMaximumWidth
+  ///FetchMaximumHeight
   double get maxHeight {
-    return LayoutSize.maxHeight(const BoxConstraints());
+    double getMaxHeight = 0;
+    LayoutBuilder(builder: (deviceSize, constraints) {
+      getMaxHeight = constraints.maxHeight;
+      return const SizedBox();
+    });
+    return getMaxHeight;
   }
 
-  ///FetchMinimumWidth
+  ///FetchMinimumHeight
   double get minHeight {
-    return LayoutSize.minHeight(const BoxConstraints());
+    double getMinHeight = 0;
+    LayoutBuilder(builder: (deviceSize, constraints) {
+      getMinHeight = constraints.minHeight;
+      return const SizedBox();
+    });
+    return getMinHeight;
   }
 }

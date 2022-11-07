@@ -1,9 +1,6 @@
 Language: [English](README.md)
 
-You can add and get custom size,orientation of any type of widgets.
-In size, you can add and get width,height of the device and widgets and You also get the full height and width of particular devices.
-This packages is developed for all platforms.
-This purpose of creating this package is to save time and increase productivity.
+This package helps the user to get width, height details of device, widgets.
 
 ## Get started
 
@@ -12,7 +9,7 @@ This purpose of creating this package is to save time and increase productivity.
 
 ```yaml
 dependencies:
-  flutter_size: ^0.0.4
+  flutter_size: ^0.0.5
 ```
 
 ## Features
@@ -74,3 +71,4 @@ class _ExampleScreenState extends State<ExampleScreen> {
 
 ```
 
+# [View more Examples](https://github.com/Abhay987/flutter_size/tree/master/example)
