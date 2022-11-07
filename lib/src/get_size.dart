@@ -41,10 +41,14 @@ extension DeviceSize on BuildContext {
   ///FetchMaximumWidth
   double get maxWidth {
     double getMaxWidth = 0;
-    LayoutBuilder(builder: (deviceSize, constraints) {
-      getMaxWidth = constraints.maxWidth;
-      return const SizedBox();
-    });
+
+    // LayoutBuilder(builder: (deviceSize, constraints) {
+    //   getMaxWidth = constraints.maxWidth;
+    //   return const SizedBox();
+    // });
+
+    getMaxWidth = const BoxConstraints().constrainHeight();
+
     return getMaxWidth;
   }
 
@@ -62,7 +66,7 @@ extension DeviceSize on BuildContext {
   double get maxHeight {
     double getMaxHeight = 0;
     LayoutBuilder(builder: (deviceSize, constraints) {
-      getMaxHeight = constraints.maxHeight;
+      getMaxHeight = constraints.constrainHeight();
       return const SizedBox();
     });
     return getMaxHeight;
