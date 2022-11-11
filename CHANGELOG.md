@@ -4,7 +4,7 @@
 
 ### New features
 
-* Add custom space between widgets
+* Add function to fetch custom space between widgets
 * Add function to fetch current platform brightness
 
 # [0.0.4]
