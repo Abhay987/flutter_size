@@ -1,22 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_size/flutter_size.dart';
 
-class ExampleSecondScreen extends StatefulWidget {
-  const ExampleSecondScreen({Key? key}) : super(key: key);
+class ExampleSecond extends StatefulWidget {
+  const ExampleSecond({Key? key}) : super(key: key);
 
   @override
-  State<ExampleSecondScreen> createState() => _ExampleSecondScreenState();
+  State<ExampleSecond> createState() => _ExampleSecondState();
 }
 
-class _ExampleSecondScreenState extends State<ExampleSecondScreen> {
+class _ExampleSecondState extends State<ExampleSecond> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-          color: Colors.green,
-          width: context.maxWidth,
-          height: context.maxHeight,
-          child: const Text("Hello World")),
-    );
+    return SafeArea(
+        child: Scaffold(
+      body: Column(
+        children: [
+          const Text('Hello World'),
+          40.verticalSpaceBetweenWidgets,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text('Hello'),
+              45.horizontalSpaceBetweenWidgets,
+              const Text('World !'),
+            ],
+          ),
+        ],
+      ),
+    ));
   }
 }

@@ -1,4 +1,9 @@
-# [0.0.5]
+# [1.0.0]
+
+* **Breaking change**. Remove Unnecessary functions and First Stable version for 1.x.
+
+### New features
+
 * Add custom space between widgets
 * Add function to fetch current platform brightness
 
@@ -13,5 +18,5 @@
 * Added Example for packages
 
 # [0.0.1]
-* This is initial stable version
+* This is initial version
  

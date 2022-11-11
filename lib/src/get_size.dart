@@ -37,34 +37,4 @@ extension DeviceSize on BuildContext {
   Brightness get platformBrightness {
     return MediaQuery.of(this).platformBrightness;
   }
-
-  ///FetchMaximumWidth
-  double get maxWidth {
-    double getMaxWidth = 0;
-
-    // LayoutBuilder(builder: (deviceSize, constraints) {
-    //   getMaxWidth = constraints.maxWidth;
-    //   return const SizedBox();
-    // });
-
-    BoxConstraints boxConstraints = const BoxConstraints.expand();
-    getMaxWidth = boxConstraints.maxWidth;
-
-    return getMaxWidth;
-  }
-
-  ///FetchMaximumHeight
-  double get maxHeight {
-    double getMaxHeight = 0;
-
-    BoxConstraints boxConstraints = const BoxConstraints.expand();
-    getMaxHeight = boxConstraints.maxHeight;
-
-    // LayoutBuilder(builder: (deviceSize, constraints) {
-    //   getMaxHeight = constraints.constrainHeight();
-    //   return const SizedBox();
-    // });
-
-    return getMaxHeight;
-  }
 }

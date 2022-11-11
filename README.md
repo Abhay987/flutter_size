@@ -9,7 +9,7 @@ This package helps the user to get width, height details of device, widgets.
 
 ```yaml
 dependencies:
-  flutter_size: ^0.0.5
+  flutter_size: ^1.0.0
 ```
 
 ## Features
@@ -20,6 +20,8 @@ dependencies:
 - Time Saving & improve productivity
 
 ## Usage 
+
+## Methods
 
 ### context.width(double size)
 
