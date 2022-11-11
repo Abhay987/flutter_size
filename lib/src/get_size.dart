@@ -26,16 +26,16 @@ extension DeviceSize on BuildContext {
     return MediaQuery.of(this).orientation;
   }
 
-  ///FetchCustomWidthWithoutPaddingSize
-  double widthExceptPadding(double paddingSize) {
-    return MediaQuery.of(this).size.width - paddingSize;
-  }
-
   ///FetchDeviceHeightExpectAppBarHeightAndStatusBarHeight
   double get totalHeight {
     return MediaQuery.of(this).size.height -
         kToolbarHeight -
         MediaQuery.of(this).padding.top;
+  }
+
+  /// Return Platform Brightness
+  Brightness get platformBrightness {
+    return MediaQuery.of(this).platformBrightness;
   }
 
   ///FetchMaximumWidth
@@ -47,38 +47,24 @@ extension DeviceSize on BuildContext {
     //   return const SizedBox();
     // });
 
-    getMaxWidth = const BoxConstraints().constrainHeight();
+    BoxConstraints boxConstraints = const BoxConstraints.expand();
+    getMaxWidth = boxConstraints.maxWidth;
 
     return getMaxWidth;
-  }
-
-  ///FetchMinimumWidth
-  double get minWidth {
-    double getMinWidth = 0;
-    LayoutBuilder(builder: (deviceSize, constraints) {
-      getMinWidth = constraints.minWidth;
-      return const SizedBox();
-    });
-    return getMinWidth;
   }
 
   ///FetchMaximumHeight
   double get maxHeight {
     double getMaxHeight = 0;
-    LayoutBuilder(builder: (deviceSize, constraints) {
-      getMaxHeight = constraints.constrainHeight();
-      return const SizedBox();
-    });
-    return getMaxHeight;
-  }
 
-  ///FetchMinimumHeight
-  double get minHeight {
-    double getMinHeight = 0;
-    LayoutBuilder(builder: (deviceSize, constraints) {
-      getMinHeight = constraints.minHeight;
-      return const SizedBox();
-    });
-    return getMinHeight;
+    BoxConstraints boxConstraints = const BoxConstraints.expand();
+    getMaxHeight = boxConstraints.maxHeight;
+
+    // LayoutBuilder(builder: (deviceSize, constraints) {
+    //   getMaxHeight = constraints.constrainHeight();
+    //   return const SizedBox();
+    // });
+
+    return getMaxHeight;
   }
 }

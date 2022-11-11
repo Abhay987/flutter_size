@@ -12,11 +12,11 @@ class _ExampleSecondScreenState extends State<ExampleSecondScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-          child: SizedBox(
-              width: context.maxWidth * 0.2,
-              height: context.maxHeight * 0.4,
-              child: const Text("Example Second"))),
+      body: Container(
+          color: Colors.green,
+          width: context.maxWidth,
+          height: context.maxHeight,
+          child: const Text("Hello World")),
     );
   }
 }
