@@ -147,6 +147,10 @@ returns SizedBox with width as the provided value.
 
 you can also used this function for return SizedBox with width as the provided value.
 
+### (String value).fstLtCapitalize
+
+return String with first letter Capitalization
+
 ```dart
 
 class CustomSpaceBetweenWidgets extends StatelessWidget {
@@ -157,7 +161,7 @@ class CustomSpaceBetweenWidgets extends StatelessWidget {
     return SafeArea(child: Scaffold(
       body: Column(
         children: [
-          const Text('hello World'.fstLtCapitalize), /// return String with first letter capitialzation
+          const Text('hello World'.fstLtCapitalize), /// return String with first letter Capitalization
           /// You can choose function acc. to you choice..
           40.heightBox,
           40.verticalSpaceBetweenWidgets,
