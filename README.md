@@ -9,7 +9,7 @@ This package helps the user to get width, height details of device, widgets.
 
 ```yaml
 dependencies:
-  flutter_size: ^1.0.0
+  flutter_size: ^1.0.1
 ```
 
 ## Features
@@ -91,6 +91,10 @@ returns device height excluding appBar height and status bar height.
 
 this method gives platform brightness of the device.
 
+### context.returnBack
+
+this method return previos page if the previous is available in stack and current page will removed from stack.
+
 
 ```dart
 
@@ -125,9 +129,17 @@ class DeviceOrientationAndDeviceHeightAndPlatformBrightness extends StatelessWid
 
 returns SizedBox with height as the provided value.
 
+### (double height).heightBox
+
+you can also used this function for return SizedBox with height as the provided value.
+
 ### (double width).horizontalSpaceBetweenWidgets
 
 returns SizedBox with width as the provided value.
+
+### (double width).widthBox
+
+you can also used this function for return SizedBox with width as the provided value.
 
 ```dart
 
@@ -139,13 +151,17 @@ class CustomSpaceBetweenWidgets extends StatelessWidget {
     return SafeArea(child: Scaffold(
       body: Column(
         children: [
-          const Text('Hello World'),
+          const Text('hello World'.fstLtCapitalize), /// return String with first letter capitialzation
+          /// You can choose function acc. to you choice..
+          40.heightBox,
           40.verticalSpaceBetweenWidgets,
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text('Hello'),
+          /// You can choose function acc. to you choice..
+              40.widthBox,
               45.horizontalSpaceBetweenWidgets,
               const Text('World !'),
             ],
@@ -158,6 +174,52 @@ class CustomSpaceBetweenWidgets extends StatelessWidget {
 
 ```
 
+### Dynamic Extension Understanding
+
+
+```dart
+
+
+class UnderstandingDynamicExtension extends StatelessWidget {
+  const UnderstandingDynamicExtension({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+        child: Scaffold(
+      body: Column(children: [
+        // if value is null then its return '' other value will be converted into string
+        Text(null.getNonNullableStringData),
+        ElevatedButton(
+          onPressed: () {
+            /// this function return log dynamic value for used different purposed.
+            /// these data will not be shown in relase mode
+            "api value is print in log form".logPrint;
+            1.logPrint;
+            true.logPrint;
+          },
+          child: const Text('Submit'),
+        ),
+        TextFormField(
+          //it checks value is null , is Empty then return error otherwise it return null
+          //"Name" this value can be dyanmic acc. to your choice.
+          // if field doest not validate then its showing error like -> 'Name field can\'t be empty'
+          validator: "Name".fieldValidator,
+        ),
+        TextFormField(
+          //it checks value is null , is Empty and also check the value must be num type in inputfield otherwise it return error.
+          //"Phone Number" this value can be dyanmic acc. to your choice.
+          // if field doest not validate then its showing error like ->
+          //'Phone Number field can\'t be empty','Phone Number field should be valid number'
+          validator: "Phone Number".numberfieldValidator,
+        ),
+      ]),
+    ));
+  }
+}
+
+
+```
 
 
 ### layoutBody class
