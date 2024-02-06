@@ -1,40 +1,42 @@
 import 'package:flutter/material.dart';
 
-extension DeviceSize on BuildContext {
+extension CustomContextExtension on BuildContext {
   ///FetchCustomWidth
   double width(double widthSize) {
-    return MediaQuery.of(this).size.width * widthSize;
+    return MediaQuery.sizeOf(this).width * widthSize;
   }
 
   ///FetchCustomHeight
   double height(double heightSize) {
-    return MediaQuery.of(this).size.height * heightSize;
+    return MediaQuery.sizeOf(this).height * heightSize;
   }
 
   ///FetchDeviceWidth
   double get deviceWidth {
-    return MediaQuery.of(this).size.width;
+    return MediaQuery.sizeOf(this).width;
   }
 
   ///FetchDeviceHeight
   double get deviceHeight {
-    return MediaQuery.of(this).size.height;
+    return MediaQuery.sizeOf(this).height;
   }
 
   ///FetchDeviceOrientation
   Orientation get deviceOrientation {
-    return MediaQuery.of(this).orientation;
+    return MediaQuery.orientationOf(this);
   }
 
   ///FetchDeviceHeightExpectAppBarHeightAndStatusBarHeight
   double get totalHeight {
-    return MediaQuery.of(this).size.height -
+    return MediaQuery.sizeOf(this).height -
         kToolbarHeight -
-        MediaQuery.of(this).padding.top;
+        MediaQuery.paddingOf(this).top;
   }
 
   /// Return Platform Brightness
   Brightness get platformBrightness {
-    return MediaQuery.of(this).platformBrightness;
+    return MediaQuery.platformBrightnessOf(this);
   }
+
+  void get returnBack => Navigator.of(this).maybePop();
 }
