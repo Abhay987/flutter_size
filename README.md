@@ -93,7 +93,7 @@ this method gives platform brightness of the device.
 
 ### context.returnBack
 
-this method return previos page if the previous is available in stack and current page will removed from stack.
+this method return previous page if the previous is available in stack and current page will removed from stack.
 
 
 ```dart
@@ -114,6 +114,12 @@ class DeviceOrientationAndDeviceHeightAndPlatformBrightness extends StatelessWid
             Text("Device Height excluding appBar height and status bar height is : ${context.totalHeight}"),
             const SizedBox(height: 40,),
             Text("Platform Brightness is : ${context.platformBrightness}"),
+            ElevatedButton(
+              onPressed:(){
+                context.returnBack;
+              },
+              child: const Text("Go Back")
+            ),
           ],
         ),
       ),
@@ -174,7 +180,31 @@ class CustomSpaceBetweenWidgets extends StatelessWidget {
 
 ```
 
-### Dynamic Extension Understanding
+## Dynamic Extension Understanding
+
+
+### (dynamic dynamicValue).getNonNullableStringData
+
+returns empty String if value is null otherwise dynamic value converted to string
+
+### (dynamic dynamicValue).logPrint
+
+this method is showing log with dynamic value.
+
+### (dynamic dynamicValue).fieldValidator
+
+this function is used for validation in TextField,TextFormField widget.
+it checks if value is null, is Empty then return error otherwise it return null
+"Name" this value can be dynamic acc. to your choice.
+if field doest not validate then its showing error like -> 'Name field can\'t be empty'
+
+### (dynamic dynamicValue).fieldValidator
+
+this function also used for validation in TextField,TextFormField widget.
+it checks value is null, is Empty and also check the value must be num type in InputField otherwise it return error.
+"Phone Number" this value can be dynamic acc. to your choice.
+if field doest not validate then its showing error like ->
+'Phone Number field can\'t be empty','Phone Number field should be valid number'
 
 
 ```dart
@@ -193,7 +223,7 @@ class UnderstandingDynamicExtension extends StatelessWidget {
         ElevatedButton(
           onPressed: () {
             /// this function return log dynamic value for used different purposed.
-            /// these data will not be shown in relase mode
+            /// these data will not be shown in release mode
             "api value is print in log form".logPrint;
             1.logPrint;
             true.logPrint;
@@ -202,13 +232,13 @@ class UnderstandingDynamicExtension extends StatelessWidget {
         ),
         TextFormField(
           //it checks value is null , is Empty then return error otherwise it return null
-          //"Name" this value can be dyanmic acc. to your choice.
+          //"Name" this value can be dynamic acc. to your choice.
           // if field doest not validate then its showing error like -> 'Name field can\'t be empty'
           validator: "Name".fieldValidator,
         ),
         TextFormField(
           //it checks value is null , is Empty and also check the value must be num type in inputfield otherwise it return error.
-          //"Phone Number" this value can be dyanmic acc. to your choice.
+          //"Phone Number" this value can be dynamic acc. to your choice.
           // if field doest not validate then its showing error like ->
           //'Phone Number field can\'t be empty','Phone Number field should be valid number'
           validator: "Phone Number".numberfieldValidator,
