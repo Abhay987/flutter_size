@@ -241,7 +241,7 @@ class UnderstandingDynamicExtension extends StatelessWidget {
           validator: "Name".fieldValidator,
         ),
         TextFormField(
-          //it checks value is null , is Empty and also check the value must be num type in inputfield otherwise it return error.
+          //it checks value is null , is Empty and also check the value must be num type in InputField otherwise it return error.
           //"Phone Number" this value can be dynamic acc. to your choice.
           // if field doest not validate then its showing error like ->
           //'Phone Number field can\'t be empty','Phone Number field should be valid number'
